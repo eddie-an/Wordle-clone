@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="top-nav-bar">
+      <div id="Nav-title">
+        <h1>Wordle</h1>
+      </div>  
+      <div class="nav-buttons">
+        <div class="button-container">
+        <button id="Dark-mode-icon" onclick="changeThemeButton()">&#9681;</button>
+        </div>
+        <div class="button-container">
+        <button id="Hint-icon" onclick="hintButton()">&#63;</button>
+        </div>
+        <div class="button-container">
+        <button id="Game-instructions-icon" onclick="instructionsButton()">&#9432;</button>
+        </div>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="game">
+        <div id="Win-screen" class="hide">
+          <img src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" />
+        </div>
+        <div class="grid-container"></div>
+        <div id="Start-over">
+          <button onclick="resetGame()">Start Over</button>
+        </div>
+      </div>
+      <div class="instructions hide">
+        <h3>How to Play</h3>
+        <ul>
+          <li>Start typing. The letters will appear in the boxes</li><br>
+          <li>Remove letters with Backspace</li><br>
+          <li>Hit Enter/Return to submit an answer</li><br>
+          <li>Letters with green background are in the right spot</li><br>
+          <li>Letters with yellow background exist in the word, but are in the wrong spots</li><br>
+          <li>Letters with gray background do not exist in the word</li><br>
+          <li>If you need a hint, click the &#63; icon</li><br>
+        </ul>
+      </div>
+    </div>
+    <div class="info-bar hide">
+      <p id="info-bar-content"></p>
+    </div>
+    <nav class="footer">
+      <h6>&#169; Edward An 2023</h6>
+    </nav>
+    <script src="./wordle.js"></script>
+  </body>
+</html>
