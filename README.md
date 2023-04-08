@@ -14,3 +14,11 @@ The application reads a dictionary of words from this endpoint: `https://api.mas
 <br>
 Since the API endpoint contains only four letter words, this wordle clone has 4 letter words unlike the original wordle game which has 5.
 
+# How to run the program
+In order to run the program, download the source files on your local machine:
+- index.html
+- style.css
+- wordle.js
+
+Once installed, the application can be ran by running index.html on localhost.
+
