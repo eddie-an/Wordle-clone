@@ -38,7 +38,8 @@ Once installed, the application can be ran by running index.html on localhost.
 
 The full game play is shown in the .mp4 file in the repository.
 
-Keep scrolling for further explanations.
+Keep scrolling for further explanations. 
+<br>
 The game instruction is shown when the user clicks on the `i` icon as shown below.
 ![How to play](how_to_play.png)
 
