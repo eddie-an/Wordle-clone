@@ -32,6 +32,9 @@ Once installed, the application can be ran by running index.html on localhost.
 
 ---
 # Gameplay
+
+The full game play is shown here
+![Game Play](gameplay_video.mp4)
 The game instruction is shown when the user clicks on the `i` icon as shown below.
 ![How to play](how_to_play.png)
 
