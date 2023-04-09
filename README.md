@@ -28,7 +28,10 @@ Once installed, the application can be ran by running index.html on localhost.
 
 # What I learned
 * Front end web development
-* 
+* JavaScript DOM API
+* The use of `fetch` function to call an API endpoint.
+* CSS styling
+* HTML Document Object Model
 
 ---
 # Gameplay
