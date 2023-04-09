@@ -36,7 +36,7 @@ Once installed, the application can be ran by running index.html on localhost.
 ---
 # Gameplay
 
-The full game play is shown in the .mp4 file in the repository.
+The full game play is shown in the gameplay_video.mp4 file in the repository (download is required to view).
 
 Keep scrolling for further explanations. 
 <br>
