@@ -45,7 +45,7 @@ The game instruction is shown when the user clicks on the `i` icon as shown belo
 
 <br>
 
-The game runs on the browser as shown below. The website generates a random word on the API for the user to guess and the user gets 4 attempts.
+The game runs on the browser as shown below. The website fetches a random word from the API for the user to guess and the user gets 4 attempts.
 The hint shows up on the bottom of the page when the user clicks on the `?` icon.
 ![gameplay](gameplay.png)
 
