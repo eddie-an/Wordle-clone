@@ -37,21 +37,20 @@ let hint; // global variable for hint
 
 const initialize = () => { // Initiailizing the answer and hint variable from the API.
     const fetchData = async () => { // Fetch the data from the API
-        const res = await fetch("https://api.masoudkf.com/v1/wordle", 
+        const res = await fetch("http://localhost:8080/api/get-word", 
         {
             headers: {"x-api-key": "sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv",},
         });
-    let json = await res.json();
-    return json
+    let wordList = await res.json();
+    return wordList
     }
 
-    fetchData().then(json => { // Select a random word and write it into the global variables
-        let apiDictionary = json.dictionary;
-        let length = apiDictionary.length;
+    fetchData().then(wordList => { // Select a random word and write it into the global variables
+        // let apiDictionary = json.dictionary;
+        let length = wordList.length;
         let randomNumber = Number.parseInt(Math.random() * length);
-        answer = apiDictionary[randomNumber]["word"];
-        hint = apiDictionary[randomNumber]["hint"];
-        //console.log(answer);
+        answer = wordList[randomNumber]["word"];
+        hint = wordList[randomNumber]["hint"];
         const hintContent = document.getElementById("info-bar-content");
         hintContent.textContent = "Hint: " + hint; // Sets the text content of the info bar of the website
     });
