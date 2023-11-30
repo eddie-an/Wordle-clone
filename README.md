@@ -1,5 +1,6 @@
 # Wordle-clone
 This application is a clone of Wordle using HTML, CSS, and JavaScript.
+
 The application reads a dictionary of words from this endpoint: `https://api.masoudkf.com/v1/wordle`. The endpoint requires an API key
 (`sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv`). The API is fetched using the following:
 
@@ -11,18 +12,35 @@ The application reads a dictionary of words from this endpoint: `https://api.mas
     });
   ```
   
+Because the professor took down the API, I created my own using Java, Springboot and MySQL :)
+
 <br>
 Since the API endpoint contains only four letter words, this wordle clone has 4 letter words unlike the original wordle game which has 5.
 
 ---
 
 # How to run the program
-In order to run the program, download the source files on your local machine:
-- index.html
-- style.css
-- wordle.js
+In order to run the program, clone the repo using `git clone "https://github.com/eddie-an/Wordle-clone"`
 
-Once installed, the application can be ran by running index.html on localhost.
+Change to wordle-api directory: `cd wordle-api`
+
+Install MySQL Server and start the server
+
+Run `mysql -u root -p` and enter your MySQL password
+
+The command line interface should change to `mysql> `
+
+Run `source Wordle.sql;` to set up the MySQL database
+
+Run `brew install maven`
+
+Then run `mvn spring-boot:run`
+
+Server is now set up on localhost:8080
+
+Change to wordle-application directory: `cd wordle-application`
+
+Then, the web application can be ran by clicking on `index.html`
 
 ---
 
@@ -32,6 +50,7 @@ Once installed, the application can be ran by running index.html on localhost.
 * The use of `fetch` function to call an API endpoint.
 * CSS styling
 * HTML Document Object Model
+* Creating an locally hosted API using Java and SpringBoot
 
 ---
 # Gameplay
