@@ -32,6 +32,8 @@ The command line interface should change to `mysql> `
 
 Run `source Wordle.sql;` to set up the MySQL database
 
+Run `quit` to exit out of the mysql command line interface
+
 Run `brew install maven`
 
 Then run `mvn spring-boot:run`
