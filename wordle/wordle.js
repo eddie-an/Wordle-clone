@@ -37,16 +37,12 @@ let hint; // global variable for hint
 
 const initialize = () => { // Initiailizing the answer and hint variable from the API.
     const fetchData = async () => { // Fetch the data from the API
-        const res = await fetch("http://localhost:8080/api/get-word", 
-        {
-            headers: {"x-api-key": "sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv",},
-        });
-    let wordList = await res.json();
-    return wordList
+        const res = await fetch("http://localhost:8080/api/get-word");
+        let wordList = await res.json();
+        return wordList
     }
 
     fetchData().then(wordList => { // Select a random word and write it into the global variables
-        // let apiDictionary = json.dictionary;
         let length = wordList.length;
         let randomNumber = Number.parseInt(Math.random() * length);
         answer = wordList[randomNumber]["word"];
