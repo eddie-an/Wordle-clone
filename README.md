@@ -1,8 +1,12 @@
 # Wordle-clone
 This application is a clone of Wordle using HTML, CSS, and JavaScript.
 
-The application reads a dictionary of words from this endpoint: `https://api.masoudkf.com/v1/wordle`. The endpoint requires an API key
-(`sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv`). The API is fetched using the following:
+Demo is shown [here](https://youtu.be/RwV05SrBHHI).
+
+
+<strike> The application reads a dictionary of words from this endpoint: `https://api.masoudkf.com/v1/wordle`. The endpoint requires an API key
+(`sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv`). The API is fetched using the following: </strike>
+
 
 ```js
     const res = await fetch("https://api.masoudkf.com/v1/wordle", {
@@ -10,8 +14,10 @@ The application reads a dictionary of words from this endpoint: `https://api.mas
         "x-api-key": "sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv",
         },
     });
+    
   ```
-  
+##### Above code snippet is no longer used.
+
 Because the professor took down the API, I created my own using Java, Springboot and MySQL :)
 
 <br>
@@ -57,7 +63,7 @@ Then, the web application can be ran by clicking on `index.html`
 ---
 # Gameplay
 
-The full game play is shown in the gameplay_video.mp4 file in the repository (download is required to view).
+The full game play is shown [here](https://youtu.be/RwV05SrBHHI).
 
 Keep scrolling for further explanations. 
 <br>
