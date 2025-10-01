@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,13 +10,22 @@ import java.sql.*;
 @Service
 public class WordService {
 
+    @Value("${DB_URL}")
+    private String DB_URL;
+
+    @Value("${DB_USERNAME}")
+    private String DB_USERNAME;
+
+    @Value("${DB_PASSWORD}")
+    private String DB_PASSWORD;
+
     public List<Word> getWords() {
         ArrayList<Word> returnVal = new ArrayList<>();
         Connection dbConnection = null;
         try {
             // This connection is going to be different for every user.
             // Make sure to change the url, user, and password.
-            dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/wordle", "root", "SQL123456"); // Change this line as needed
+            dbConnection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD); // Change this line as needed
         } catch (SQLException e) {
             e.printStackTrace();
         }
