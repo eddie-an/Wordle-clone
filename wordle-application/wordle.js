@@ -37,7 +37,7 @@ let hint; // global variable for hint
 
 const initialize = () => { // Initiailizing the answer and hint variable from the API.
     const fetchData = async () => { // Fetch the data from the API
-        const res = await fetch("http://localhost:8080/api/get-word");
+        const res = await fetch("https://wordle-clone-production-111b.up.railway.app/api/get-word");
         let wordList = await res.json();
         return wordList
     }
