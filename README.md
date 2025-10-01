@@ -2,6 +2,7 @@
 This application is a clone of Wordle using HTML, CSS, and JavaScript.
 
 Demo is shown [here](https://youtu.be/RwV05SrBHHI).
+Here is the website link. Play around with it: [Website Link](https://wordle-clone-eddie.netlify.app/)
 
 
 <strike> The application reads a dictionary of words from this endpoint: `https://api.masoudkf.com/v1/wordle`. The endpoint requires an API key
