@@ -1,8 +1,10 @@
 # Wordle-clone
 This application is a clone of Wordle using HTML, CSS, and JavaScript.
 
-Demo is shown [here](https://youtu.be/RwV05SrBHHI).
-Here is the website link. Play around with it: [Website Link](https://wordle-clone-eddie.netlify.app/)
+Here is the website link. Play around with it: [Link to Website](https://wordle-clone-eddie.netlify.app/)
+
+Demo video is shown [here](https://youtu.be/RwV05SrBHHI).
+
 
 
 <strike> The application reads a dictionary of words from this endpoint: `https://api.masoudkf.com/v1/wordle`. The endpoint requires an API key
@@ -19,15 +21,26 @@ Here is the website link. Play around with it: [Website Link](https://wordle-clo
   ```
 ##### Above code snippet is no longer used.
 
-Because the professor took down the API, I created my own using Java, Springboot and MySQL :)
+Because the professor took down the API, I created my own API using Java, Springboot and MySQL :)
 
 <br>
-Since the API endpoint contains only four letter words, this wordle clone has 4 letter words unlike the original wordle game which has 5.
 
 ---
 
-# How to run the program
-In order to run the program, clone the repo using `git clone "https://github.com/eddie-an/Wordle-clone"`
+# Update
+
+I hosted the database on AWS and used Railway to host the API which handles the GET Requests.
+
+The front-end is hosted on Netlify.
+
+You don't need to run the program locally since I hosted it. However, the program can be run locally by referring to the next section.
+
+---
+
+# How to run the program locally
+Ensure MySQL and Spring Boot is installed on your machine.
+
+In order to run the program locally, clone the repo using `git clone "https://github.com/eddie-an/Wordle-clone"`
 
 Change to wordle-api directory: `cd wordle-api`
 
@@ -47,7 +60,9 @@ Then run `mvn spring-boot:run`
 
 Server is now set up on localhost:8080
 
-Change to wordle-application directory: `cd wordle-application`
+Change to wordle-application directory: `cd ../wordle-application`
+
+Change `line 40` on [wordle.js](/wordle-application/wordle.js) to `http://localhost:8080/api/get-word`.
 
 Then, the web application can be ran by clicking on `index.html`
 
