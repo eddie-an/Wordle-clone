@@ -86,7 +86,14 @@ function keyboardInput ()
 {
     const hiddenInput = document.getElementById('hiddenInput');
 
-    document.addEventListener('keyup', (event) => {handleKey(event.key)});
+    document.addEventListener('keyup', (event) => {
+        if (event.key === 'Backspace') {
+            deleteLetter();
+        }
+        else if (event.key === 'Enter') {
+            submitAnswer();
+        }
+    });
 
     // Funnel mobile keystrokes from hidden input
     hiddenInput.addEventListener('input', () => {
