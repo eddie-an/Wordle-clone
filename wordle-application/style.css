@@ -7,6 +7,7 @@ body { /* Styling for entire body*/
   justify-content: space-between;
   margin: 0px;
   min-height: 100vh;
+  overflow: auto;
   padding: 0px;
 }
 
@@ -137,7 +138,7 @@ button:hover { /* Cursor should change to be a pointer when it hovers over any b
 }
 
 .info-bar { /* Default colour used for hints */
-  background-color: #f9f1e8;
+  background-color: rgb(249, 241, 232, 0.85);
   color: black !important;
   bottom: 67px;
   position: fixed;
@@ -150,7 +151,7 @@ button:hover { /* Cursor should change to be a pointer when it hovers over any b
 }
 
 #info-bar-win { /* The hint bar changes color to gray when the user wins */
-  background-color: #f7f7f7 !important;
+  background-color: rgb(247, 247, 247, 0.85) !important;
   color: black !important;
   bottom: 67px;
   position: fixed;
@@ -159,7 +160,7 @@ button:hover { /* Cursor should change to be a pointer when it hovers over any b
 }
 
 #info-bar-loss { /* The hint bar changes color to red when the user loses */
-  background-color: #dd051c !important;
+  background-color: rgb(221, 5, 28, 0.85) !important;
   color: white !important;
   bottom: 67px;
   position: fixed;
@@ -195,23 +196,53 @@ button:hover { /* Cursor should change to be a pointer when it hovers over any b
 }
 
 .hide { /* Any elements with this class is hidden. Used for buttons that toggle certain elements on and off*/
-  display: none;
+  display: none !important;
 }
 
 
-@media (max-width: 1024px) {
-  .main {
-    gap: 20px;
+
+@media (max-width: 950px) {
+  body { /* Styling for entire body*/
+    padding: 0px;
   }
 
-  .instructions {
-    max-width: 300px;
+  .main { /* Styling for main body of the game. Main container has the game, and instructions
+            The game and instructions are top to bottom in the mobile design*/
+    display: flex;
+    flex-direction: column;
   }
 
+  .grid-container { /* Layout of wordle grid */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    margin-top: 40px;
+    margin: auto;
+    padding: 0px;
+    width: 240px;
+  }
 
+  .instructions { /* instructions tab for the game. It is located within the main container*/
+      border-left: none;
+      margin-left:none;
+      padding-left:none;
+      border-top: 1px solid rgb(212, 212, 212);
+      margin-top: 20px;
+      padding-top: 20px;
+      margin-bottom: 4rem;
+  }
+
+  .instructions > * {
+    font-size: 0.8rem;
+  }
+
+  .footer { /* Styling of footers. Z-index of 1 ensures that it is layered above every other element.*/
+    font-size: 0.8rem;
+  }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
   
   #Nav-title { /* Navigation title*/
@@ -221,9 +252,24 @@ button:hover { /* Cursor should change to be a pointer when it hovers over any b
     font-size: 1.4rem;
   }
 
-#info-bar-content {
-  font-size: 0.6rem;
+  #info-bar-content {
+    font-size: 0.8rem;
+  }
 }
 
+@media (max-width: 768px) {
 
+  #Win-screen { /* Screen that shows up when the user wins. The element with this tag is hidden by default
+              This container uses overflow: hidden to crop the gif that appears*/
+    padding-top: 3rem;
+    height: 262.5px;
+    overflow: hidden;
+    width: 450px;
+  }
+
+  #Win-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
 }
