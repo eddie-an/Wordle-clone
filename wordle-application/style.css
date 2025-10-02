@@ -69,6 +69,10 @@ button:hover { /* Cursor should change to be a pointer when it hovers over any b
   text-align: center;
 }
 
+.game:hover {
+  cursor: pointer;
+}
+
 #Win-screen { /* Screen that shows up when the user wins. The element with this tag is hidden by default
               This container uses overflow: hidden to crop the gif that appears*/
   height: 280px;
