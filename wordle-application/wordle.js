@@ -84,22 +84,34 @@ guessRows.forEach((row, i) => {
 //Keyboard input
 function keyboardInput ()
 {
-    document.addEventListener('keyup', (event) => {
-        let input = event.key;
-        if (input.match('^[a-zA-Z]{1}$')){
-            input = input.toUpperCase();
-            addLetter(input);
-        }
-        else if (input == 'Backspace')
-        {
-            deleteLetter();
-        }
-        else if (input == 'Enter')
-        {
-            submitAnswer();
+    const hiddenInput = document.getElementById('hiddenInput');
+
+    document.addEventListener('keyup', (event) => {handleKey(event.key)});
+
+    // Funnel mobile keystrokes from hidden input
+    hiddenInput.addEventListener('input', () => {
+        const value = hiddenInput.value;
+        hiddenInput.value = ""; // clear so only single char at a time
+        if (value) {
+            handleKey(value);
         }
     });
+
+    // Keep focus so mobile keyboard stays open
+    document.body.addEventListener('click', () => hiddenInput.focus());
+    hiddenInput.focus();
 }
+
+function handleKey(input) {
+    if (input.match('^[a-zA-Z]{1}$')) {
+        addLetter(input.toUpperCase());
+    } else if (input === 'Backspace') {
+        deleteLetter();
+    } else if (input === 'Enter') {
+        submitAnswer();
+    }
+}
+
 
 
 // Add letter (Called when an alphabetical letter on the keyboard is pressed)
