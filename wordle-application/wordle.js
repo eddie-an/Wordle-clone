@@ -104,9 +104,9 @@ function keyboardInput ()
         }
     });
 
-    // Keep focus so mobile keyboard stays open
-    document.body.addEventListener('click', () => hiddenInput.focus());
-    hiddenInput.focus();
+    const gameArea = document.querySelector('.game');
+    gameArea.addEventListener('click', () => hiddenInput.focus());
+
 }
 
 function handleKey(input) {
